@@ -3,8 +3,27 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+from sqlalchemy import delete
+
+from src.storage.models import NalogSessionORM
 
 BASE_DIR = Path(__file__).parent.parent
+
+
+@pytest.fixture
+def not_nalog_authorized(session):
+    with session:
+        session.execute(delete(NalogSessionORM))
+        session.commit()
+
+
+@pytest.fixture
+def nalog_authorized(session):
+    with session:
+        obj = NalogSessionORM(session_id='session_id',
+                              refresh_token='refresh_token')
+        session.add(obj)
+        session.commit()
 
 
 @pytest.fixture(scope='session')
