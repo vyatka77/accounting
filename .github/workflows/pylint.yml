@@ -1,0 +1,67 @@
+name: Pylint static code analysis 
+
+on:
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - main
+#      - github-actions
+#  pull_request:
+#    branches:
+#      - main
+
+jobs:
+  run-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+#        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [windows-latest]
+        python-version:
+#          - "3.7"
+#          - "3.8"
+#          - "3.9"
+#          - "3.10"
+#          - "3.11"
+          - "3.12"
+    name: PyLint on
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setting up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+#      - name: Get pip cache dir
+#        id: pip-cache
+#        run: |
+#          echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
+
+      - name: pip cache
+        uses: actions/cache@v3
+        with:
+          path: ~\AppData\Local\pip\Cache
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Installing dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pylint
+
+      # - name: Running PyLint static code analysis on src and tests
+      #   run: |
+      #     pylint src
+      #     pylint tests
+
+      - name: Running PyLint static code analysis on src
+        run: pylint src
+
+      - name: Running PyLint static code analysis on tests
+        run: pylint tests
