@@ -107,7 +107,7 @@ def get_password() -> str:
         return ''
 
 
-def get_default_nalog_auth() -> str:
+def get_default_nalog_auth() -> str | None:
     if hasattr(settings, 'USE_NALOG_AUTHORIZATION'):
         return settings.USE_NALOG_AUTHORIZATION
 
