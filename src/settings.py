@@ -68,8 +68,8 @@ class Settings(GUISettings,
     auth_nalog: NalogSession | None = None
 
 
-NALOG_LOG_FILE = BASE_DIR / 'src/logs/nalog.log'
-GUI_LOG_FILE = BASE_DIR / 'src/logs/gui.log'
+NALOG_LOG_FILE = BASE_DIR / 'logs/nalog.log'
+GUI_LOG_FILE = BASE_DIR / 'logs/gui.log'
 
 LOGGING = {
     'version': 1,
