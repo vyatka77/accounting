@@ -1,0 +1,11 @@
+[tool.mypy]
+warn_no_return = false
+implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = 'src.settings'
+disable_error_code = ['call-arg']
+
+[[tool.mypy.overrides]]
+module = 'pyzbar.*'
+ignore_missing_imports = true
