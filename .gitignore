@@ -1,0 +1,14 @@
+/__pycache__/
+/.venv/
+/.idea/
+/archive/
+/data/
+/data-project/
+/src/logs/
+
+*.pyc
+.env
+db.sqlite3
+test.py
+dev-requirements.in
+requirements.in
