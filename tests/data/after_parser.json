@@ -1,0 +1,99 @@
+{
+  "status": 2,
+  "statusReal": 2,
+  "id": "65c8979dba0916528679e92d",
+  "kind": "kkt",
+  "createdAt": "2024-02-13T17:47:58+03:00",
+  "statusDescription": {},
+  "qr": "t=20240211T1400&s=411.70&fn=7284440700373884&i=14980&fp=1152442848&n=1",
+  "operation": {
+    "date": "2024-02-11T14:00",
+    "type": 1,
+    "sum": 41170
+  },
+  "process": [
+    {
+      "time": "2024-02-11T09:47:09+00:00",
+      "result": 21
+    },
+    {
+      "time": "2024-02-11T09:47:10+00:00",
+      "result": 2
+    }
+  ],
+  "query": {
+    "operationType": 1,
+    "sum": 41170,
+    "documentId": 14980,
+    "fsId": "7284440700373884",
+    "fiscalSign": "1152442848",
+    "date": "2024-02-11T14:00"
+  },
+  "ticket": {
+    "document": {
+      "receipt": {
+        "dateTime": 1707649200,
+        "cashTotalSum": 0,
+        "code": 3,
+        "creditSum": 0,
+        "ecashTotalSum": 41170,
+        "fiscalDocumentFormatVer": 4,
+        "fiscalDocumentNumber": 14980,
+        "fiscalDriveNumber": "7284440700373884",
+        "fiscalSign": 1152442848,
+        "items": [
+          {
+            "name": "Хлеб Бородинский на закваске 300гр",
+            "nds": 4,
+            "paymentType": 4,
+            "price": 7290,
+            "productType": 1,
+            "quantity": 1,
+            "sum": 7290
+          },
+          {
+            "name": "Чиннабон с яблоками и карамелью",
+            "nds": 4,
+            "paymentType": 4,
+            "price": 67700,
+            "productType": 1,
+            "quantity": 0.192,
+            "sum": 12998
+          },
+          {
+            "name": "Бананы",
+            "nds": 4,
+            "paymentType": 4,
+            "price": 19700,
+            "productType": 1,
+            "quantity": 1.06,
+            "sum": 20882
+          }
+        ],
+        "kktRegId": "0007676736012753    ",
+        "nds10110": 3743,
+        "operationType": 1,
+        "operator": "Старший продавец Арон Н. Н.",
+        "prepaidSum": 0,
+        "provisionSum": 0,
+        "requestNumber": 31,
+        "retailPlace": "ГМ Волочаевская",
+        "retailPlaceAddress": "02 - Республика Башкортостан, г.о. город Стерлитамак,453103,, г Стерлитамак,, ул Волочаевская, д. 6а,,,",
+        "shiftNumber": 79,
+        "taxationType": 1,
+        "appliedTaxationType": 1,
+        "totalSum": 41170,
+        "user": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАРИНА\"",
+        "userInn": "0268040102  "
+      }
+    }
+  },
+  "organization": {
+    "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАРИНА\"",
+    "inn": "0268040102"
+  },
+  "seller": {
+    "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗАРИНА\"",
+    "inn": "0268040102"
+  }
+}
